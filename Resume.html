@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Resume</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="header">
+        <div class="gallery1">
+            <img src="pic.jpg"></div>
+        <h2>Hannah Lharainne Dimaranan</h2>
+        <h3>
+            <p>Purok 4 Kaysuyo, Alfonso, Cavite</p>
+        <p>Contact No. 09166833163</p>
+        <p>Email Address: hannahlharainnedimaranan@gmail.com</p>
+    </div>
+    <div class="container">
+        <div id="navigation">
+            <button id="btn_career" onclick="displayCareer()" class="button1">CAREER OBJECTIVES</button>
+            <button id="btn_personal" onclick="displayPersonal()" class="button1">PERSONAL BACKGROUND</button> 
+            <button id="btn_skills" onclick="displaySkills()" class="button1">SKILLS AND INTEREST</button>
+            <button id="btn_educ" onclick="displayEduc()" class="button1">EDUCATIONAL ATTAINMENT</button>   
+            <button id="btn_awards" onclick="displayAwards()" class="button1">AWARDS RECIEVED</button>
+            <button id="btn_all" onclick="displayAll()" class="button1">DISPLAY ALL</button>                       
+        </div>
+        <div id="career_obj" class="defaultdisplay">
+    <h2>CAREER OBJECTIVES:</h2>
+        <h3>
+            <p>To obtain a sound position and work in an environment that effectively utilizes my skills and provide opportunity for self-development. 
+To enhance my skills and knowledge in a field that fits my qualifications. To join your team and help establish rapport with my co-workers. </p>
+        </h3>
+        <hr>
+        </div>
+        <div id="personal" class="defaultdisplay">
+        <h2>PERSONAL BACKGROUND:</h2>
+        <h3>
+            <pre>Date of Birth:  May 23, 2003</pre>
+            <pre>Civil Status:   Single</pre>
+            <pre>Gender:         Female</pre>
+            <pre>Citizenship:    Filipino </pre>
+        </h3>
+        <hr>
+        </div>
+        <div id="skillsandinterest" class="defaultdisplay">
+        <h2>SKILLS AND INTEREST:</h2>
+        <h3>
+            <li>Computer literate (Programming, MS Applications)</li>
+            <li>Good in communication skills</li>
+            <li>Quick learner</li>
+            <li>Can work under pressure</li>
+            <li>Ability to carry out instruction </li>
+        </h3>
+        <hr>
+    </div>
+    <div id="educ" class="defaultdisplay">
+        <h2>EDUCATIONAL ATTAINMENT:</h2>
+        <h3>
+            <pre> College:             City College of Tagaytay
+                      Bachelor of Science in Information Technology
+                      2021-present</pre>
+            <pre> Senior High School:  Olivarez College Tagaytay
+                      San Jose, Tagaytay City
+                      2019-2021</pre>
+          <pre> High School:	      Kaytitingga National High School
+                      Kaytitingga 1, Alfonso, Cavite
+                      2015-2019</pre>  
+          <pre> Elementary:  	      St. Joseph Parochial School of Cavite
+                      Kaytitingga 1, Alfonso, Cavite
+                      2014-2015</pre>            
+        </h3>
+        <hr>
+    </div>
+    <div id="awards" class="defaultdisplay">
+        <h2>AWARDS RECEIVED :</h2>
+        <h3>
+            <li>Bronze Awardee (2015) </li>
+            <li>Dr. Rosario Olivarez Excellence Awardee (2020)</li>
+            <li>Dr. Pablo Olivarez Excellence Awardee (2021)</li>
+            <li>Dean’s Lister (2022)</li>
+        </h3>
+    </div>
+    </div>
+    <script>
+        function backtoNormal(){
+            document.getElementById('btn_career').style.background = '#FFFFFF';
+            document.getElementById('btn_personal').style.background = '#FFFFFF';
+            document.getElementById('btn_skills').style.background = '#FFFFFF';
+            document.getElementById('btn_educ').style.background = '#FFFFFF';
+            document.getElementById('btn_awards').style.background = '#FFFFFF';
+        }
+
+        function displayCareer(){
+            document.getElementById('career_obj').style.display ='block';
+            document.getElementById('personal').style.display ='none';
+            document.getElementById('skillsandinterest').style.display ='none';
+            document.getElementById('educ').style.display ='none';
+            document.getElementById('awards').style.display ='none';
+            backtoNormal();
+            document.getElementById('btn_career').style.background = '#f0aaaa';
+            
+        }
+
+        function displayPersonal(){
+            document.getElementById('career_obj').style.display ='none';
+            document.getElementById('personal').style.display ='block';
+            document.getElementById('skillsandinterest').style.display ='none';
+            document.getElementById('educ').style.display ='none';
+            document.getElementById('awards').style.display ='none';
+            backtoNormal();
+            document.getElementById('btn_personal').style.background = '#f0aaaa';
+        }
+
+        function displaySkills(){
+            document.getElementById('career_obj').style.display ='none';
+            document.getElementById('personal').style.display ='none';
+            document.getElementById('skillsandinterest').style.display ='block';
+            document.getElementById('educ').style.display ='none';
+            document.getElementById('awards').style.display ='none';
+            backtoNormal();
+            document.getElementById('btn_skills').style.background = '#f0aaaa';
+        }
+
+        function displayEduc(){
+            document.getElementById('career_obj').style.display ='none';
+            document.getElementById('personal').style.display ='none';
+            document.getElementById('skillsandinterest').style.display ='none';
+            document.getElementById('educ').style.display ='block';
+            document.getElementById('awards').style.display ='none';
+            backtoNormal();
+            document.getElementById('btn_educ').style.background = '#f0aaaa';
+        }
+
+        function displayAwards(){
+            document.getElementById('career_obj').style.display ='none';
+            document.getElementById('personal').style.display ='none';
+            document.getElementById('skillsandinterest').style.display ='none';
+            document.getElementById('educ').style.display ='none';
+            document.getElementById('awards').style.display ='block';
+            backtoNormal();
+            document.getElementById('btn_awards').style.background = '#f0aaaa';
+        }
+
+        function displayAll(){
+            document.getElementById('career_obj').style.display ='block';
+            document.getElementById('personal').style.display ='block';
+            document.getElementById('skillsandinterest').style.display ='block';
+            document.getElementById('educ').style.display ='block';
+            document.getElementById('awards').style.display ='block';
+            backtoNormal();
+            document.getElementById('btn_all').style.background = '#f0aaaa';
+        }
+    </script>
+</body>
+</html>
